@@ -5,6 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 WORKDIR /source
 COPY kea-$VER.tar.gz .
 
+COPY apt2 /etc/apt/sources.list
 RUN apt-get update -y \
     && apt-get -y install --no-install-recommends \
         procps \

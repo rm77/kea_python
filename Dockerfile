@@ -12,6 +12,7 @@ RUN make clean install \
 
 FROM ubuntu:21.04
 ENV DEBIAN_FRONTEND noninteractive
+COPY apt2 /etc/apt/sources.list
 
 RUN apt-get update -y \
     && apt-get -y install \
